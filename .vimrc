@@ -10,10 +10,12 @@ set nonumber
 
 " Adds highlighting to N seach
 set hlsearch
+set ignorecase
 set smartcase
+set showmatch
 
 " Auto-indent
-set autoindent expandtab tabstop=4 shiftwidth=4
+set autoindent expandtab tabstop=4 shiftwidth=4 smarttab
 
 " Enables persistant undo - you can undo after quitting a file
 let vimDir = '$HOME/.vim'
@@ -36,4 +38,9 @@ endif
 
 " Remaps control-n to turn on and off line numbers
 nnoremap <C-n> :set nu! <ENTER>
+
+" Remaps any combination of upper and lowercase Q and W and WQ to work
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev Wq wq
 
